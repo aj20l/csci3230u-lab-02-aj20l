@@ -34,10 +34,15 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  background-color: var(--header-bg);
+  color:white;
 }
 
 .site-header nav {
   margin-left: auto;
+}
+.site-header nav a {
+  color: white;
 }
 
 
@@ -57,42 +62,51 @@ body {
   height: 40px;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid black;
+  border: 1px solid var(--board-line);
+  color: var(--digit);
 }
-
 
 #board td:nth-child(3n) {
-  border-right: 3px solid black;
+  border-right: 3px solid var(--block-line);
 }
 
-
 #board tr:nth-child(3n) td {
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid var(--block-line);
 }
 
 #board td:hover {
-  background-color: lightblue;
+  background-color: var(--color-hover);
 }
-
 
 /* ---- the numbers palette  (requirement 6) -------------------------- */
 /* TODO: size + border the .palette cells; a :hover colour; and a
    .active style for the selected digit (used in Lab 06). */
 .palette {
+  border-collapse: collapse;
+}
+
+.palette td {
   width: 40px;
   height: 40px;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid black;
+  border: 1px solid var(--board-line);
+  color: var(--digit);
+  cursor: pointer;
 }
 
-.palette:hover {
-  background-color: lightblue;
+.palette td:hover {
+  background-color: var(--color-hover);
 }
 
-.palette.active {
-  background-color: blue;
+.palette td.active {
+  background-color: var(--header-bg);
   color: white;
+}
+#board,
+.palette {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -101,6 +115,12 @@ body {
    the header row of .scores. */
 .scores {
   padding: 20px;
+    margin-left: auto;
+  margin-right: auto;
+}
+.scores th {
+  text-align: left;
+  border-bottom: 2px solid var(--block-line);
 }
 
 .scores th,
