@@ -7,7 +7,19 @@
     <link rel="stylesheet" href="styles/sudoku.css" />
     <!-- Part 1: write the markup below. Part 2: style it in
          styles/sudoku.css. No JavaScript this week. -->
-  </head>
+<header class="site-header">
+<nav>
+<a href="index.html">Play Sudoku</a>
+<a href="high_scores.html"> High Scores </a>
+
+
+</nav>
+<a class="brand"> 
+<img src="images/logo.gif" alt="board">
+</a>
+</header>
+
+  
   <body>
     <!-- TODO (Part 1): the site header, class="site-header".
          - an <a class="brand"> with the logo (images/logo.gif) and the
@@ -23,5 +35,68 @@
            (leave the other cells empty)
          - the numbers palette as a <table id="palette" class="palette">:
            one row of 1-9 followed by the undo icon (images/undo.png) -->
-  </body>
+
+<table id="board"  cellspacing="0" cellpadding="8">
+  <tr>
+    <td></td><td>1</td><td></td>
+    <td></td><td></td><td></td>
+    <td></td><td>9</td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td>4</td>
+    <td></td><td></td><td></td>
+    <td>2</td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td>8</td>
+    <td></td><td></td><td>5</td>
+    <td></td><td></td><td></td>
+  </tr>
+
+  <tr>
+    <td></td><td></td><td></td>
+    <td></td><td></td><td></td>
+    <td></td><td>3</td><td></td>
+  </tr>
+  <tr>
+    <td>2</td><td></td><td></td>
+    <td></td><td>4</td><td></td>
+    <td>1</td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td></td>
+    <td></td><td></td><td></td>
+    <td></td><td></td><td></td>
+  </tr>
+
+  <tr>
+    <td></td><td></td><td>1</td>
+    <td>8</td><td></td><td></td>
+    <td>6</td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td> <td>3</td> <td></td>
+    <td></td> <td></td> <td></td>
+    <td></td> <td>8</td> <td></td>
+  </tr>
+  <tr>
+    <td></td> <td></td> <td>6</td>
+    <td></td> <td></td> <td></td>
+    <td></td> <td></td> <td></td>
+  </tr>
+</table>
+
+<table id="palette" class="palette">
+<tr>
+<td>1</td>  <td>2</td>  <td>3</td>
+<td>4</td>   <td>5</td>    <td>6</td>
+<td>7</td>   <td>8</td>    <td>9</td>
+<td><img src="images/undo.png" alt="Undo"> </td>
+
+</tr>
+</table>
+
+
+
+ </body>
 </html>
