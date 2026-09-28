@@ -30,6 +30,17 @@ body {
 /* TODO: a Flexbox row on .site-header; push the nav right with
    margin-left:auto; add flex-wrap so the nav drops below the brand on a
    narrow screen (that's the whole responsive story - no media query). */
+.site-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.site-header nav {
+  margin-left: auto;
+}
+
+
 
 
 /* ---- the board  (requirement 5) ------------------------------------ */
@@ -37,13 +48,67 @@ body {
    thin cell borders + a THICK border around each 3x3 block
    (td:nth-child(3n) and tr:nth-child(3n) td); a :hover colour.
    Also add .user-input and .error rules now - Lab 06 switches them on. */
+#board {
+  border-collapse: collapse;
+}
+
+#board td {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid black;
+}
+
+
+#board td:nth-child(3n) {
+  border-right: 3px solid black;
+}
+
+
+#board tr:nth-child(3n) td {
+  border-bottom: 3px solid black;
+}
+
+#board td:hover {
+  background-color: lightblue;
+}
 
 
 /* ---- the numbers palette  (requirement 6) -------------------------- */
 /* TODO: size + border the .palette cells; a :hover colour; and a
    .active style for the selected digit (used in Lab 06). */
+.palette {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid black;
+}
+
+.palette:hover {
+  background-color: lightblue;
+}
+
+.palette.active {
+  background-color: blue;
+  color: white;
+}
 
 
 /* ---- high-scores table  (requirement 8) ---------------------------- */
 /* TODO: comfortable padding; left-aligned headings; an underline under
    the header row of .scores. */
+.scores {
+  padding: 20px;
+}
+
+.scores th,
+.scores td {
+  padding: 10px;
+  text-align: left;
+}
+
+.scores thead {
+  border-bottom: 2px solid black;
+}
